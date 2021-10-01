@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GALLERY IMAGES SEARCH</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .container {
+            padding-top: 30px;
+        }
+
+        input {
+            outline: 0;
+            border-width: 0 0 1px;
+            border-color: rgb(185, 185, 197);
+            width: 100%;
+        }
+
+        input:focus {
+            border-color: #138496
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-fluid">
+            <div class="title">
+                <span>GALLERY IMAGES SEARCH</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Search</h2>
+                <form action="/x" enctype="multipart/form-data" method="POST">
+                    <div class="form-group">
+                        <label for="name">
+                            Name
+                        </label>
+                        <input type="text" name="name" placeholder="Enter file name..">
+                    </div>
+                    <div class="form-group">
+                        <label for="file">
+                            Or File
+                        </label>
+                        <input type="file" name="myFile" multiple accept="image/png, image/jpeg" />
+                    </div>
+                    <div class="form-group float-right">
+                        <button class="btn btn-info" type="submit">Search</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-12">
+                <h2>Store</h2>
+                <form action="/store" enctype="multipart/form-data" method="POST">
+                    <div class="form-group">
+                        <label for="file">
+                            Upload Images
+                        </label>
+                        <input type="file" name="myFile" accept=".txt" required />
+                    </div>
+                    <div class="form-group float-right">
+                        <button class="btn btn-info" type="submit">Store</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
